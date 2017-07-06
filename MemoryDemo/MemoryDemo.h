@@ -5,8 +5,15 @@
 #ifndef MEMORYDEMO_MEMORYDEMO_H
 #define MEMORYDEMO_MEMORYDEMO_H
 
+#include <new>
 
-class MemoryDemo {
+class MemoryDemo
+{
+    MemoryDemo(){}
+    virtual ~MemoryDemo(){}
+    void* operator new(std::size_t size);
+    void operator delete (void* ptr) noexcept ;
+
 
 };
 
