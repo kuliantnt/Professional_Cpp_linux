@@ -2,9 +2,7 @@
 // Created by lianlian on 17-7-6.
 //
 
-#ifndef MEMORYDEMO_MEMORYDEMO_H
-#define MEMORYDEMO_MEMORYDEMO_H
-
+#pragma once
 #include <new>
 
 class MemoryDemo
@@ -22,4 +20,3 @@ class MemoryDemo
 };
 
 
-#endif //MEMORYDEMO_MEMORYDEMO_H
