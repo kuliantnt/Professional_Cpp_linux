@@ -6,8 +6,8 @@ int main() {
     delete men;
     men = new MemoryDemo[10];
     delete men;
-    men = new (nothrow) MemoryDemo();
-    delete men;
-    men = new (nothrow) MemoryDemo[10];
-    delete [] men;
+//    men = new (nothrow) MemoryDemo();
+//    delete men;
+//    men = new (nothrow) MemoryDemo[10];
+//    delete [] men;
 }
