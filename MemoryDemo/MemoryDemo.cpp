@@ -26,24 +26,24 @@ void MemoryDemo::operator delete[](void *ptr) noexcept {
     ::operator delete[](ptr);
 }
 
-void *MemoryDemo::operator new(std::size_t size, const std::nothrow_t &no_throw) noexcept {
+void *MemoryDemo::operator new(std::size_t size, const std::nothrow_t &) noexcept {
     std::cout << "operator new no_throw" << std::endl;
-    return ::operator new(size,no_throw);
+    return ::operator new(size,nothrow);
 }
 
-void MemoryDemo::operator delete(void *ptr, const std::nothrow_t &no_throw) noexcept {
+void MemoryDemo::operator delete(void *ptr, const std::nothrow_t &) noexcept {
     std::cout << "operator delete no_throw" << std::endl;
-    ::operator delete(ptr,no_throw);
+    ::operator delete(ptr,nothrow);
 }
 
-void *MemoryDemo::operator new[](std::size_t size, const std::nothrow_t &no_throw) noexcept {
+void *MemoryDemo::operator new[](std::size_t size, const std::nothrow_t &) noexcept {
     std::cout << "operator new[] no_throw" << std::endl;
-    return ::operator new(size,no_throw);
+    return ::operator new(size,nothrow);
 }
 
-void MemoryDemo::operator delete[](void *ptr, const std::nothrow_t &t) noexcept {
+void MemoryDemo::operator delete[](void *ptr, const std::nothrow_t&) noexcept {
     std::cout << "operator delete[] no_throw" << std::endl;
-    ::operator delete(ptr,t);
+    ::operator delete(ptr,nothrow);
 }
 
 
