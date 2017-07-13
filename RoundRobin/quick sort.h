@@ -21,9 +21,7 @@ void quick_sort(T arr[], const int len){
         Range range = r[--p];
         if(range.start >= range.end)
             continue;
-        T
-                mid = arr[range.end];
-
+        T mid = arr[range.end];
         int left = range.start;
         int right = range.end - 1;
         while(left < right){
