@@ -24,20 +24,20 @@ void quick_sort(T arr[], const int len){
         T mid = arr[range.end];
         int left = range.start;
         int right = range.end - 1;
-        while(left < right){
-            while(arr[left] < mid && left < right){
-                left ++;
+        while(left < right) {
+            while (arr[left] < mid && left < right) {
+                left++;
             }
-            while(arr[right] >= mid && left < right){
+            while (arr[right] >= mid && left < right) {
                 right--;
             }
-            std::swap (arr[left] , arr[right]);
-            if(arr[left] >= arr[range.end])
-                std::swap (arr[left] , arr[range.end]);
+            std::swap(arr[left], arr[right]);
+            if (arr[left] >= arr[range.end])
+                std::swap(arr[left], arr[range.end]);
             else
                 left++;
-            r[p++] = Range(range.start, left -1);
-            r[p++] = Range(left + 1,range.end);
+            r[p++] = Range(range.start, left - 1);
+            r[p++] = Range(left + 1, range.end);
         }
     }
 }
