@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES
         main.cpp
-        RoundRobin.h)
+        RoundRobin.h
+        quick_sort.h
+        )
 
 add_executable(RoundRobin ${SOURCE_FILES})

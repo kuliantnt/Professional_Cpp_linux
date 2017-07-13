@@ -1,5 +1,5 @@
 #include <iostream>
-#include "quick sort.h"
+#include "quick_sort.h"
 
 int main() {
     std::size_t size = 9;
