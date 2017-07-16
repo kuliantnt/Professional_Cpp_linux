@@ -7,6 +7,6 @@ set(SOURCE_FILES
         main.cpp
         RoundRobin.h
         quick_sort.h
-        )
+        Process.h)
 
-add_executable(RoundRobin ${SOURCE_FILES})
+add_executable(RoundRobin ${SOURCE_FILES} Process.h)

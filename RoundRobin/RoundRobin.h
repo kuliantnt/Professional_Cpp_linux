@@ -36,9 +36,9 @@ RoundRobin<T>::~RoundRobin() {
 template <typename T>
 void RoundRobin<T>::add(const T &element)
 {
-    int pos = (mCurElem == std::end(mCurElem)? -1:mCurElem - std::begin(mElems));
+    int pos = (mCurElem == std::end(mElems)? -1 : mCurElem - std::begin(mElems));
     mElems.push_back(element);
-    mCurElem = (pos == -1? std::end(mElems) : std::begin(mElems) + pos);
+    mCurElem = (pos == -1 ? std::end(mElems) : std::begin(mElems) + pos);
 }
 
 template <typename T>
@@ -50,7 +50,7 @@ void RoundRobin<T>::remove(const T &element) {
             if(mCurElem <= it){
                 newPos = mCurElem - std::begin(mElems);
             }else{
-                newPos = mCurElem - std::begin(mElems) + 1;
+                newPos = mCurElem - std::begin(mElems) - 1;
             }
             mElems.erase(it);
             mCurElem = std::begin(mElems) + newPos;
@@ -60,10 +60,14 @@ void RoundRobin<T>::remove(const T &element) {
 }
 
 template <typename T>
-T &RoundRobin::getNext() {
+T &RoundRobin<T>::getNext() {
     if(mElems.empty()){
         throw std::out_of_range("No element in the list");
-    }else{
+    }
+    if(mCurElem == std::end(mElems)){
+        mCurElem = std::begin(mElems);
+    }
+    else{
         ++mCurElem;
         if(mCurElem == std::end(mElems)){
             mCurElem = std::begin(mElems);

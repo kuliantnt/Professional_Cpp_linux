@@ -3,6 +3,8 @@
 //
 #ifndef ROUNDROBIN_QUICK_SORT_H
 #define ROUNDROBIN_QUICK_SORT_H
+#include <algorithm>
+
 struct Range{
     int start,end;
     Range(int s = 0,int e = 0){

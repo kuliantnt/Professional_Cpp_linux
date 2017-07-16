@@ -1,8 +1,16 @@
 #include <iostream>
-#include "quick_sort.h"
+#include "Process.h"
 
-int main() {
-    std::size_t size = 9;
-    int *array = new int[size]{9, 6, 5, 1, 3, 2, 4, 8, 7};
-    quick_sort(array, (const int) size);
+int main(int argc, char** argv) {
+    std::vector <Process> processes = {Process("1"), Process("2"), Process("3")};
+    Scheduler scheduler(processes);
+    for(int i = 0; i!=4; ++i) {
+        scheduler.schedulerTimeSlice();
+    }
+    scheduler.removeProcess(processes[1]);
+    std:: cout << "Removed second process"<< std::endl;
+    for(int i = 0; i!=4; ++i) {
+        scheduler.schedulerTimeSlice();
+    }
+    return 0;
 }
