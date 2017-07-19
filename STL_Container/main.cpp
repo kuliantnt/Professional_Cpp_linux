@@ -1,6 +1,5 @@
 #include <iostream>
 #include <list>
-#include <string>
 
 int main() {
     std::list<std::string> dictionary {"aardvark","ambulance"};
