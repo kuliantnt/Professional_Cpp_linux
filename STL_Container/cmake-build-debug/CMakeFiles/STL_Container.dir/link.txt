@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/STL_Container.dir/main.cpp.o  -o STL_Container 

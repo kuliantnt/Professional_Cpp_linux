@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/RoundRobin/Process.h
+string
+-
+iostream
+-
+vector
+-
+RoundRobin.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/RoundRobin/RoundRobin.h
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/RoundRobin/RoundRobin.h
+vector
+-
+stdexcept
+-
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/RoundRobin/main.cpp
+iostream
+-
+Process.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/RoundRobin/Process.h
+

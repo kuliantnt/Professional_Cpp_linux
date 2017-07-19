@@ -1,0 +1,4 @@
+/home/lianlian/下载/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/cmake-build-debug

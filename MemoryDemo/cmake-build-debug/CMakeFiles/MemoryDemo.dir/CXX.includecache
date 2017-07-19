@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.cpp
+iostream
+-
+MemoryDemo.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.h
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.h
+new
+-
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/main.cpp
+iostream
+-
+limits
+-
+MemoryDemo.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.h
+

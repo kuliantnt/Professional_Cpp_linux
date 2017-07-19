@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/MemoryDemo.dir/main.cpp.o CMakeFiles/MemoryDemo.dir/MemoryDemo.cpp.o  -o MemoryDemo 
