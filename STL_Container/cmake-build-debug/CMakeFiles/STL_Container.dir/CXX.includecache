@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/IPPacket.h
+
+/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/PacketBuffer.h
+queue
+-
+stdexcept
+-
+
 /home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/main.cpp
 iostream
 -
 list
 -
-string
--
+PacketBuffer.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/PacketBuffer.h
+IPPacket.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/IPPacket.h
 
