@@ -4,9 +4,11 @@
 #include <iostream>
 #include <queue>
 
+class Error;
 bool operator<(const Error &lhs, const Error &rhs) ;
 std::ostream &operator<<(std::ostream &os, const Error &err);
-class Error{
+class Error
+{
 public:
     Error(int priority, std::string errMsg): mPriority(priority),mError(std::move(errMsg)){}
     int getPriority()const {

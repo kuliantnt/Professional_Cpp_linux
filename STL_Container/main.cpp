@@ -3,7 +3,26 @@
 //#include "PacketBuffer.h"
 //#include "IPPacket.h"
 
+#include "Error.h"
+
 int main() {
+    /**
+     * priority_Queue Program
+     */
+    ErrorCorrelator ec;
+    ec.addError(Error(3,"Unable to read file"));
+    ec.addError(Error(1,"Incorrect entry from user"));
+    ec.addError(Error(10,"Unable to allocate memory"));
+    while(true){
+        try {
+            Error e = ec.getError();
+            std::cout << e << std::endl;
+        }catch(std::out_of_range& e){
+            std::cout << "Finished processing errors" << std::endl;
+            break;
+        }
+    }
+
 
     /**
      * Queue Program
