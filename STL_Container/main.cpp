@@ -3,12 +3,32 @@
 //#include "PacketBuffer.h"
 //#include "IPPacket.h"
 
-#include "Error.h"
+//#include "Error.h"
+
+#include <map>
+#include <iostream>
+#include "Data.h"
 
 int main() {
     /**
+     * Map Program
+     */
+
+    std::map<int,Data> dataMap;
+    auto ret = dataMap.insert({1,Data(4)});
+    if(ret.second)
+        std::cout << "Insert succeeded" << std::endl;
+    else
+        std::cout << "Insert failed!" << std::endl;
+    ret = dataMap.insert(std::make_pair(1,Data(6)));
+    if(ret.second)
+        std::cout << "Insert succeeded" << std::endl;
+    else
+        std::cout << "Insert failed!" << std::endl;
+    /**
      * priority_Queue Program
      */
+/*
     ErrorCorrelator ec;
     ec.addError(Error(3,"Unable to read file"));
     ec.addError(Error(1,"Incorrect entry from user"));
@@ -22,7 +42,7 @@ int main() {
             break;
         }
     }
-
+*/
 
     /**
      * Queue Program
