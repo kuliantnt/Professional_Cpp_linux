@@ -123,6 +123,33 @@ STL_Container/fast:
 	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/build
 .PHONY : STL_Container/fast
 
+BuddyList.o: BuddyList.cpp.o
+
+.PHONY : BuddyList.o
+
+# target to build an object file
+BuddyList.cpp.o:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/BuddyList.cpp.o
+.PHONY : BuddyList.cpp.o
+
+BuddyList.i: BuddyList.cpp.i
+
+.PHONY : BuddyList.i
+
+# target to preprocess a source file
+BuddyList.cpp.i:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/BuddyList.cpp.i
+.PHONY : BuddyList.cpp.i
+
+BuddyList.s: BuddyList.cpp.s
+
+.PHONY : BuddyList.s
+
+# target to generate assembly for a file
+BuddyList.cpp.s:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/BuddyList.cpp.s
+.PHONY : BuddyList.cpp.s
+
 Data.o: Data.cpp.o
 
 .PHONY : Data.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... STL_Container"
+	@echo "... BuddyList.o"
+	@echo "... BuddyList.i"
+	@echo "... BuddyList.s"
 	@echo "... Data.o"
 	@echo "... Data.i"
 	@echo "... Data.s"

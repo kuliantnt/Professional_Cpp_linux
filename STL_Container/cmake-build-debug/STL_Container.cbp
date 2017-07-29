@@ -85,6 +85,12 @@
 		<Unit filename="/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BankAccount.h">
 			<Option target="STL_Container"/>
 		</Unit>
+		<Unit filename="/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BuddyList.cpp">
+			<Option target="STL_Container"/>
+		</Unit>
+		<Unit filename="/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BuddyList.h">
+			<Option target="STL_Container"/>
+		</Unit>
 		<Unit filename="/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/Data.cpp">
 			<Option target="STL_Container"/>
 		</Unit>

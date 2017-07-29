@@ -7,14 +7,33 @@
 
 #include <map>
 #include <iostream>
-#include "Data.h"
+#include "BankAccount.h"
+//#include "Data.h"
 
 int main() {
+    /**
+     * Bank Test
+     */
+    BankDB db;
+    db.addAccount(BankAccount(100,"Nicholas Solter"));
+    db.addAccount(BankAccount(200,"Scott Kleper"));
+    try{
+        auto& acct = db.findAccount(100);
+        std::cout << "Find account 100"<< std::endl;
+        acct.setClientName("Nicholas A solter");
+        auto& acct2 = db.findAccount("Scott Kleper");
+        std::cout << "Found account of Scott Kepler" << std::endl;
+        auto& acct3 = db.findAccount(1000);
+    }catch(const std::out_of_range&){
+            std::cout << "Unable to find account" << std::endl;
+    }catch(...){
+        std::cout << "Error"<< std::endl;
+    }
     /**
      * Map Program
      */
 
-    std::map<int,Data> dataMap;
+    /*std::map<int,Data> dataMap;
     auto ret = dataMap.insert({1,Data(4)});
     if(ret.second)
         std::cout << "Insert succeeded" << std::endl;
@@ -24,7 +43,7 @@ int main() {
     if(ret.second)
         std::cout << "Insert succeeded" << std::endl;
     else
-        std::cout << "Insert failed!" << std::endl;
+        std::cout << "Insert failed!" << std::endl;*/
     /**
      * priority_Queue Program
      */
@@ -47,41 +66,41 @@ int main() {
     /**
      * Queue Program
      */
-//    PacketBuffer<IPPacket> ipPackets(3);
-//    for(int i =1;i<=4; ++i){
-//        if(!ipPackets.bufferParket(IPPacket(i)))
-//        {
-//            std::cout << "Packet " << i << " dropped (queue is full)." << std::endl;
-//        }
-//    }
-//    while (true){
-//        try{
-//            IPPacket packet = ipPackets.getNextPacket();
-//            std::cout << "Processing packet "<< packet.getID() << std::endl;
-//        }catch(const std::out_of_range& ){
-//            std::cout << "Queue is empty." << std::endl;
-//            break;
-//        }
-//    }
+   /* PacketBuffer<IPPacket> ipPackets(3);
+    for(int i =1;i<=4; ++i){
+        if(!ipPackets.bufferParket(IPPacket(i)))
+        {
+            std::cout << "Packet " << i << " dropped (queue is full)." << std::endl;
+        }
+    }
+    while (true){
+        try{
+            IPPacket packet = ipPackets.getNextPacket();
+            std::cout << "Processing packet "<< packet.getID() << std::endl;
+        }catch(const std::out_of_range& ){
+            std::cout << "Queue is empty." << std::endl;
+            break;
+        }
+    }*/
     /**
      * list program
      */
-//    std::list<std::string> dictionary {"aardvark","ambulance"};
-//    std::list<std::string> b_words {"bathos","balderdash"};
-//    dictionary.push_back("canticle");
-//    dictionary.push_back("consumerism");
-//    if(b_words.size() > 0){
-//        auto iterLastB = --(std::cend(b_words));
-//        auto it = std::cbegin(dictionary);
-//        for(;it!= std::cend(dictionary);++it){
-//            if(*it > *iterLastB){
-//                break;
-//            }
-//        }
-//        dictionary.splice(it,b_words);
-//    }
-//    for(const auto & word : dictionary){
-//        std::cout << word << std::endl;
-//    }
-//    return 0;
+   /* std::list<std::string> dictionary {"aardvark","ambulance"};
+    std::list<std::string> b_words {"bathos","balderdash"};
+    dictionary.push_back("canticle");
+    dictionary.push_back("consumerism");
+    if(b_words.size() > 0){
+        auto iterLastB = --(std::cend(b_words));
+        auto it = std::cbegin(dictionary);
+        for(;it!= std::cend(dictionary);++it){
+            if(*it > *iterLastB){
+                break;
+            }
+        }
+        dictionary.splice(it,b_words);
+    }
+    for(const auto & word : dictionary){
+        std::cout << word << std::endl;
+    }
+    return 0;*/
 }

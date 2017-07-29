@@ -31,7 +31,7 @@ public:
     bool addAccount(const BankAccount& acct);
     void deleteAccount(int acctNum);
     BankAccount& findAccount(int acctNum);
-    BankAccount& findAccount(const std::string&name);
+    BankAccount& findAccount(const std::string& name);
     void mergaDatabase(BankDB& db);
 private:
     std::map<int,BankAccount> mAccounts;
@@ -49,7 +49,7 @@ void BankDB::deleteAccount(int acctNum) {
 BankAccount &BankDB::findAccount(int acctNum) {
     auto it = mAccounts.find(acctNum);
     if(it == mAccounts.end()){
-        throw std::out_of_range("No account with thet number")
+        throw std::out_of_range("No account with that number");
     }
 
 }
@@ -60,7 +60,7 @@ BankAccount &BankDB::findAccount(const std::string &name) {
             return p.second;
         }
     }
-    throw std::out_of_range("No account with the name");
+    throw std::out_of_range("No account with the name.");
 }
 
 void BankDB::mergaDatabase(BankDB &db) {
