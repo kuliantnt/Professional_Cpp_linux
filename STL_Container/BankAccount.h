@@ -4,11 +4,12 @@
 #pragma once
 
 #include <string>
-#include <map>
+#include <unordered_map>
+#include <utility>
 
 class BankAccount{
 public:
-    BankAccount(int accNum,const std::string& name):mAcctNum(accNum),mClientName(name){}
+    BankAccount(int accNum, std::string name):mAcctNum(accNum),mClientName(std::move(name)){}
     void setAcctNum(int accNum){
         mAcctNum = accNum;
     }
@@ -18,7 +19,7 @@ public:
     void setClientName(const std::string&name){
         mClientName = name;
     }
-    const std::string& getCliendName(){
+    const std::string& getClientName(){
         return mClientName;
     }
 private:
@@ -34,7 +35,7 @@ public:
     BankAccount& findAccount(const std::string& name);
     void mergaDatabase(BankDB& db);
 private:
-    std::map<int,BankAccount> mAccounts;
+    std::unordered_map<int,BankAccount> mAccounts;
 };
 
 bool BankDB::addAccount(const BankAccount &acct) {
@@ -51,12 +52,12 @@ BankAccount &BankDB::findAccount(int acctNum) {
     if(it == mAccounts.end()){
         throw std::out_of_range("No account with that number");
     }
-
+    return it->second;
 }
 
 BankAccount &BankDB::findAccount(const std::string &name) {
     for(auto& p : mAccounts){
-        if(p.second.getCliendName() == name){
+        if(p.second.getClientName() == name){
             return p.second;
         }
     }
