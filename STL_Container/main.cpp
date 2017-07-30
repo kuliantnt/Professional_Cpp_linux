@@ -2,19 +2,36 @@
 //#include <list>
 //#include "PacketBuffer.h"
 //#include "IPPacket.h"
-
 //#include "Error.h"
-
 #include <map>
 #include <iostream>
-#include "BankAccount.h"
+#include "BuddyList.h"
+//#include "BankAccount.h"
 //#include "Data.h"
 
 int main() {
     /**
+     * BuddyList Test
+     */
+/*    BuddyList buddies;
+    buddies.addBuddy("Harry Potter","Ron Weasley");
+    buddies.addBuddy("Harry Potter","Hermione Garnger");
+    buddies.addBuddy("Harry Potter","Hagrid");
+    buddies.addBuddy("Harry Potter","Draco Malfoy");
+
+    buddies.removeBuddy("Harry Potter","Draco Malfoy");
+    buddies.addBuddy("Hagrid","Harry Potter");
+    buddies.addBuddy("Hagrid","Hermione Garnger");
+    buddies.addBuddy("Hagrid","Ron Weasley");
+    auto harryBuds = buddies.getBuddies("Harry Potter");
+    std::cout << "Harry's friends: "<< std::endl;
+    for (const auto & name : harryBuds){
+        std::cout << "\t" << name << std::endl;
+    }*/
+    /**
      * Bank Test
      */
-    BankDB db;
+    /*BankDB db;
     db.addAccount(BankAccount(100,"Nicholas Solter"));
     db.addAccount(BankAccount(200,"Scott Kleper"));
     try{
@@ -28,7 +45,7 @@ int main() {
             std::cout << "Unable to find account" << std::endl;
     }catch(...){
         std::cout << "Error"<< std::endl;
-    }
+    }*/
     /**
      * Map Program
      */

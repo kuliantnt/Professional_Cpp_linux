@@ -7,6 +7,6 @@ CMakeFiles/STL_Container.dir/BuddyList.cpp.o: ../BuddyList.h
 CMakeFiles/STL_Container.dir/Data.cpp.o: ../Data.cpp
 CMakeFiles/STL_Container.dir/Data.cpp.o: ../Data.h
 
-CMakeFiles/STL_Container.dir/main.cpp.o: ../BankAccount.h
+CMakeFiles/STL_Container.dir/main.cpp.o: ../BuddyList.h
 CMakeFiles/STL_Container.dir/main.cpp.o: ../main.cpp
 

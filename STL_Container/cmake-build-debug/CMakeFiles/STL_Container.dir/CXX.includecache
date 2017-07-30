@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BankAccount.h
-string
--
-unordered_map
--
-utility
--
-
 /home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BuddyList.cpp
 BuddyList.h
 /home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BuddyList.h
@@ -37,6 +29,6 @@ map
 -
 iostream
 -
-BankAccount.h
-/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BankAccount.h
+BuddyList.h
+/home/lianlian/文档/Git/Professional_Cpp_linux/STL_Container/BuddyList.h
 
