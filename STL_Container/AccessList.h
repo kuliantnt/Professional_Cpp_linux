@@ -1,7 +1,7 @@
 //
 // Created by lianlian on 17-7-30.
 //
-#pragma once;
+#pragma once
 
 #include <initializer_list>
 #include <string>

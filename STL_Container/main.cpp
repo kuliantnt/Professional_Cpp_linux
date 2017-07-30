@@ -3,13 +3,56 @@
 //#include "PacketBuffer.h"
 //#include "IPPacket.h"
 //#include "Error.h"
-#include <map>
+#include <unordered_map>
 #include <iostream>
 #include "BuddyList.h"
+#include "AccessList.h"
 //#include "BankAccount.h"
 //#include "Data.h"
 
+template <class T>
+void printMap(const T&m){
+    for(auto& p : m){
+        std::cout << p.first <<" (Phone: " << p.second << ")" <<std::endl;
+    }
+    std::cout << "-------" <<std::endl;
+}
+
 int main() {
+    /**
+     * using unordered_map
+     */
+    std::unordered_map<std::string,std::string> um = {
+            {"Marc G.", "123-456789"},
+            {"Scott K.", "654-987432"}
+    };
+    printMap(um);
+
+    um.insert(std::make_pair("Jonn D.", "321-987654"));
+    um["Johan G."]="963-258147";
+    um["Freddy.K."]="999-256256";
+    um.erase("Freddy.K.");
+    printMap(um);
+
+    int bucket = static_cast<int>(um.bucket("Marc G."));
+    std::cout << "Marc G. is in bucket " << bucket << " which contains the following "
+              << um.bucket_size(bucket) << " elements:" << std::endl;
+    //todo
+    /**
+     * AccessList test
+     */
+    /*AccessList fileX = {"pvw","mgregoire","baduser"};
+    fileX.removeUser("baduser");
+    if(fileX.isAllowed("mgregoire")){
+        std::cout << "mgregoire has permissions" << std::endl;
+    }
+    if(fileX.isAllowed("baduser")){
+        std::cout<<"baduser has permissions" << std::endl;
+    }
+    auto users = fileX.getAllUsers();
+    for(const auto & user : users){
+        std::cout << user<< " ";
+    }*/
     /**
      * BuddyList Test
      */
