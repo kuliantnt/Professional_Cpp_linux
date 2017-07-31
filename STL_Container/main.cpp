@@ -34,10 +34,21 @@ int main() {
     um.erase("Freddy.K.");
     printMap(um);
 
-    int bucket = static_cast<int>(um.bucket("Marc G."));
+    unsigned long bucket = um.bucket("Marc G.");
     std::cout << "Marc G. is in bucket " << bucket << " which contains the following "
               << um.bucket_size(bucket) << " elements:" << std::endl;
-    //todo
+//    auto liter = um.cbegin(bucket);
+//    auto literEnd = um.cend(bucket);
+//    while(liter != literEnd){
+    for(auto liter = um.cbegin(bucket); liter != um.cend(bucket); ++liter){
+        std::cout << "\t" << liter->first << " (Phone: " << liter -> second << ")" << std::endl;
+        liter++;
+    }
+    std::cout << "--------" << std::endl;
+
+    std::cout << "There are " << um.bucket_count() << " buckets." << std::endl;
+    std::cout << "Average number of elements in a bucket is " << um.load_factor() << std::endl;
+    return 0;
     /**
      * AccessList test
      */
