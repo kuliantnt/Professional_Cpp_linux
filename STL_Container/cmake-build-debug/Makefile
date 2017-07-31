@@ -177,6 +177,33 @@ BuddyList.cpp.s:
 	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/BuddyList.cpp.s
 .PHONY : BuddyList.cpp.s
 
+CableCompany.o: CableCompany.cpp.o
+
+.PHONY : CableCompany.o
+
+# target to build an object file
+CableCompany.cpp.o:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/CableCompany.cpp.o
+.PHONY : CableCompany.cpp.o
+
+CableCompany.i: CableCompany.cpp.i
+
+.PHONY : CableCompany.i
+
+# target to preprocess a source file
+CableCompany.cpp.i:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/CableCompany.cpp.i
+.PHONY : CableCompany.cpp.i
+
+CableCompany.s: CableCompany.cpp.s
+
+.PHONY : CableCompany.s
+
+# target to generate assembly for a file
+CableCompany.cpp.s:
+	$(MAKE) -f CMakeFiles/STL_Container.dir/build.make CMakeFiles/STL_Container.dir/CableCompany.cpp.s
+.PHONY : CableCompany.cpp.s
+
 Data.o: Data.cpp.o
 
 .PHONY : Data.o
@@ -246,6 +273,9 @@ help:
 	@echo "... BuddyList.o"
 	@echo "... BuddyList.i"
 	@echo "... BuddyList.s"
+	@echo "... CableCompany.o"
+	@echo "... CableCompany.i"
+	@echo "... CableCompany.s"
 	@echo "... Data.o"
 	@echo "... Data.i"
 	@echo "... Data.s"

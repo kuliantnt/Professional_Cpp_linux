@@ -1,15 +1,7 @@
-//#include <iostream>
-//#include <list>
-//#include "PacketBuffer.h"
-//#include "IPPacket.h"
-//#include "Error.h"
-#include <unordered_map>
 #include <iostream>
-#include "BuddyList.h"
-#include "AccessList.h"
-//#include "BankAccount.h"
-//#include "Data.h"
+#include "CableCompany.h"
 
+/*
 template <class T>
 void printMap(const T&m){
     for(auto& p : m){
@@ -17,12 +9,26 @@ void printMap(const T&m){
     }
     std::cout << "-------" <<std::endl;
 }
+*/
 
 int main() {
     /**
+     * using CableCompany
+     */
+    CableCompany mycc;
+    auto basic_pkg = "1111000000";
+    auto premium_pkg = "1111111111";
+    auto sports_pkg = "0000100111";
+    mycc.addPackage("basic",std::bitset<kNumChannels>(basic_pkg));
+    mycc.addPackage("premium",std::bitset<kNumChannels>(premium_pkg));
+    mycc.addPackage("sports",std::bitset<kNumChannels>(sports_pkg));
+    mycc.newCustomer("Marc G.","basic");
+    mycc.addPackageToCustomer("Marc G.","sports");
+    std::cout << mycc.getCustomerChannels("Marc G.") << std::endl;
+    /**
      * using unordered_map
      */
-    std::unordered_map<std::string,std::string> um = {
+    /*std::unordered_map<std::string,std::string> um = {
             {"Marc G.", "123-456789"},
             {"Scott K.", "654-987432"}
     };
@@ -37,9 +43,6 @@ int main() {
     unsigned long bucket = um.bucket("Marc G.");
     std::cout << "Marc G. is in bucket " << bucket << " which contains the following "
               << um.bucket_size(bucket) << " elements:" << std::endl;
-//    auto liter = um.cbegin(bucket);
-//    auto literEnd = um.cend(bucket);
-//    while(liter != literEnd){
     for(auto liter = um.cbegin(bucket); liter != um.cend(bucket); ++liter){
         std::cout << "\t" << liter->first << " (Phone: " << liter -> second << ")" << std::endl;
         liter++;
@@ -48,7 +51,7 @@ int main() {
 
     std::cout << "There are " << um.bucket_count() << " buckets." << std::endl;
     std::cout << "Average number of elements in a bucket is " << um.load_factor() << std::endl;
-    return 0;
+    return 0;*/
     /**
      * AccessList test
      */
