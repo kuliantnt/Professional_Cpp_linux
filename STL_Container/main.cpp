@@ -15,7 +15,7 @@ int main() {
     /**
      * using CableCompany
      */
-    CableCompany mycc;
+   /* CableCompany mycc;
     auto basic_pkg = "1111000000";
     auto premium_pkg = "1111111111";
     auto sports_pkg = "0000100111";
@@ -24,7 +24,7 @@ int main() {
     mycc.addPackage("sports",std::bitset<kNumChannels>(sports_pkg));
     mycc.newCustomer("Marc G.","basic");
     mycc.addPackageToCustomer("Marc G.","sports");
-    std::cout << mycc.getCustomerChannels("Marc G.") << std::endl;
+    std::cout << mycc.getCustomerChannels("Marc G.") << std::endl;*/
     /**
      * using unordered_map
      */
