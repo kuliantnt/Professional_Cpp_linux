@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lianlian/Documents/Git/Professional_Cpp_linux/STL_algorithm/main.cpp
+iostream
+-
+algorithm
+-
+vector
+-
+

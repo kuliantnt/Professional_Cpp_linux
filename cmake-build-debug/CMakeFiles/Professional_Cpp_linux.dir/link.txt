@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/main.cpp.o CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/MemoryDemo.cpp.o  -o Professional_Cpp_linux 
+/usr/bin/c++  -g   CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/main.cpp.o CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/MemoryDemo.cpp.o  -o Professional_Cpp_linux 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.cpp" "/home/lianlian/文档/Git/Professional_Cpp_linux/cmake-build-debug/CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/MemoryDemo.cpp.o"
-  "/home/lianlian/文档/Git/Professional_Cpp_linux/MemoryDemo/main.cpp" "/home/lianlian/文档/Git/Professional_Cpp_linux/cmake-build-debug/CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/main.cpp.o"
+  "/home/lianlian/Documents/Git/Professional_Cpp_linux/MemoryDemo/MemoryDemo.cpp" "/home/lianlian/Documents/Git/Professional_Cpp_linux/cmake-build-debug/CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/MemoryDemo.cpp.o"
+  "/home/lianlian/Documents/Git/Professional_Cpp_linux/MemoryDemo/main.cpp" "/home/lianlian/Documents/Git/Professional_Cpp_linux/cmake-build-debug/CMakeFiles/Professional_Cpp_linux.dir/MemoryDemo/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,6 +1,6 @@
-/home/lianlian/下载/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lianlian/文档/Git/Professional_Cpp_linux
--- The C compiler identification is GNU 5.4.0
--- The CXX compiler identification is GNU 5.4.0
+/home/lianlian/Downloads/CLion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lianlian/Documents/Git/Professional_Cpp_linux
+-- The C compiler identification is GNU 7.1.1
+-- The CXX compiler identification is GNU 7.1.1
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/lianlian/文档/Git/Professional_Cpp_linux/cmake-build-debug
+-- Build files have been written to: /home/lianlian/Documents/Git/Professional_Cpp_linux/cmake-build-debug
