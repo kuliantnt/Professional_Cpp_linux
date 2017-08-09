@@ -5,6 +5,8 @@
 #include <cmath>
 #include <memory>
 #include <functional>
+#include "voter.h"
+
 
 bool perfectScore(int num);
 std::function <int(void)> multiplyBy2Lambda(int x);
@@ -116,8 +118,34 @@ int main(){
     /**
      * Using Parameter lambda
      */
-    std::vector<int> vec1{1,2,3,4,5,6,7,8,9,10};
-    testCallback(vec1,[](int i){return i < 6;});
+/*    std::vector<int> vec1{1,2,3,4,5,6,7,8,9,10};
+    testCallback(vec1,[](int i){return i < 6;});*/
+    /**
+     * voter test
+     * exception using STL algorithm
+     */
+    VotersMap voters = {
+            {"Orange",      {"Amy Aardvark",       "Bob Buffalo",
+                                                                "Charles Cat", "Dwayne Dog"}},
+            {"Los Angeles", {"Elizabeth Elephant", "Fred Flamingo",
+                                    "Amy Aardvark"}},
+            {"San Diego",   {"George Goose",       "Heidi Hen", "Fred Flamingo"}}
+    };
+    std::list<std::string> felons = {"Bob Buffalo","Charles Cat"};
+    auto printDistrict = [](const DistrictPair& district){
+        std::cout << district.first << ":";
+        for(auto & str : district.second) {
+            std::cout << "{" << str << "}";
+        }
+        std::cout << std::endl;
+    };
+    std::cout << "Before Audit:" << std::endl;
+    std::for_each(std::cbegin(voters),std::cend(voters),printDistrict);
+    std::cout << std::endl;
+    auditVoterRolls(voters,felons);
+    std::cout << "After Audit: " << std::endl;
+    std::for_each(std::cbegin(voters),std::cend(voters),printDistrict);
+    std::cout << std::endl;
 
 }
 bool perfectScore(int num){

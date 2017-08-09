@@ -3,5 +3,5 @@ project(STL_algorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp voter.h)
 add_executable(STL_algorithm ${SOURCE_FILES})
